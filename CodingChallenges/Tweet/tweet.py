@@ -1,3 +1,5 @@
+"""Find who tweeted the most"""
+
 from typing import Set
 
 
