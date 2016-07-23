@@ -4,9 +4,11 @@ class Car:
     count = 0
 
     # Constructor
-    def __init__(self, model_name, year):
-        Car.count = Car.count + 1
+    def __init__(self, model_name, year=2010):
+        # Class attribute
+        Car.count += 1
         # Instance attributes
+        self.id = Car.count
         self.model_name = model_name
         self.year = year
 
