@@ -9,6 +9,8 @@ class Car:
         # Instance attributes
         self.model_name = model_name
         self.year = year
+
+        # NOTE: If the name of a parameter/variable clashes with the name of a keyword, you should add a trailing underscore to the name. Ex: type_
     
     def display(self):
         """This is a display method"""
