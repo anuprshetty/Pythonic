@@ -2,10 +2,14 @@
 # Dictionary element --> (key, value)
 # Keys should be unique
 # Keys can be any Hashable types such as string, int.
-# In addition to dictionary elements, dictionary data structure maintain an additional index table.
+# Internal strucutre:
+# A. In addition to dictionary elements, dictionary data structure maintain an additional index table.
 # Index table contains 2 things:
 # 1. Keys which are sorted (Indeces) --> We can apply binary search on these keys (O(logn)). Efficient searching.
 # 2. Memory addresses for the corresponding dictionary elements.
+# B. Array of linked_list(key, value)
+# Key --> hash_function(key) --> hash_code --> hash_code % array_size --> index --> array[index] --> linked_list --> traverse linked_list to get respective value for the given key.
+# Time complexity --> (O(1)). Efficient searching.
 friends_ages = {"Anup": 24, "Ram": 35}
 print(friends_ages)
 print(friends_ages["Anup"])
@@ -29,8 +33,8 @@ for (key, value) in friends_ages.items():
 
 # NOTE: You can't directly edit views. Instead, you can still edit the dictionary, and the views reflect your changes immediately.
 
-if "Anup" in friends_ages: # Check whether Anup key present in the dictionary or not.
+if "Anup" in friends_ages: # Check whether Anup key present in the dictionary or not. Search in hash table --> Time complexity (O(1)).
     print(f"Anup --> {friends_ages['Anup']}")
 
-if "Anup" in friends_ages.keys(): # Check whether Anup key present in the dictionary or not.
+if "Anup" in friends_ages.keys(): # Check whether Anup key present in the dictionary or not. Search in list --> Time complexity (O(n)).
     print(f"Anup --> {friends_ages['Anup']}")

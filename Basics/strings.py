@@ -1,4 +1,4 @@
-name = "Ram" # single quote
+name = 'Ram' # single quote
 name = "Anup" # double quote
 
 print(name)

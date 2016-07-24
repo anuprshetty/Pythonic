@@ -60,6 +60,7 @@ tuple2[1][0] = 10
 print(tuple2) # (3, [10, 6, 77], 8)
 
 # Dictionary is sorted based on Keys. So faster searching (Binary search O(logn)).
+# Dictionary is hash table. Time complexity for search --> O(1).
 # Immutable objects are hashable.
 # Always Hashable objects are used as dictionary keys.
 my_dict = {
