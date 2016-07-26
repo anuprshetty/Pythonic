@@ -1,5 +1,10 @@
 # class method is used as a factory.
 class Book:
+    # Class CONSTANT
+    # Naming convention: UPPERCASE
+    # Using constants, we are specifying that we don't want to change this value. The value should be treated as a CONSTANT. Because Python doesn't really implement constants. We use the naming convention to tell other developers to treat this as constants.
+    # NOTE: 
+    # We are defining this constant as a tuple. To protect this value even further. Tuples are immutable.
     TYPES = ("hardcover", "papercover")
 
     def __init__(self, name: str, book_type: str, weight: int):
