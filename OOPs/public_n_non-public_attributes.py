@@ -40,3 +40,12 @@ print(car._Car__brand) # Honda # Technically you can access them outside the cla
 # __<attribute>_ --> name mangling is triggerred.
 # __<attribute>__ --> name mangling is NOT triggerred. This is reserved for "Magic Methods or Dunder - Double Under (Underscores)"
 # You should only use name mangling for special cases, we usually rely on 1 leading underscore to define a non-public attribute.
+
+# Non-Public Methods and Name Mangling:
+# - To make a method "non-public", you should add a leading underscore.
+def _display_data:
+    pass
+
+# - If you add two underscores, the process of name mangling will occur, just like with non-public attributes.
+def __display_data:
+    pass
