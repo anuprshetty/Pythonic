@@ -1,5 +1,6 @@
 import os
 
+
 class MusicSchool:
 
 	_students = {}
