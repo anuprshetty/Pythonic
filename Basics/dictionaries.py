@@ -12,7 +12,8 @@
 # Time complexity --> (O(1)). Efficient searching.
 friends_ages = {"Anup": 24, "Ram": 35}
 print(friends_ages)
-print(friends_ages["Anup"])
+print(friends_ages["Anup"]) # If key is not found in dictionary, then throws exception.
+print(friends_ages.get("Anup")) # If key is not found in dictionary, then doesn't throw exception  AND returns None.
 # Add an element
 friends_ages["Bob"] = 22
 # Update an element

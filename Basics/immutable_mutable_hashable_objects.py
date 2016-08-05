@@ -4,6 +4,11 @@
 # 2. Mutable built-in objects: list, set and dictionary.
 # NOTE: Immutable objects can't be changed whereas mutable objects can. 
 
+# id(obj) Function:
+# - Return the “identity” of an object. 
+# - This is an integer which is guaranteed to be unique and constant for this object during its lifetime. 
+# NOTE: Two objects with non-overlapping lifetimes may have the same id() value.
+# NOTE: CPython implementation detail: This is the address of the object in memory.
 
 # Immutable Objects:
 int_val = 100

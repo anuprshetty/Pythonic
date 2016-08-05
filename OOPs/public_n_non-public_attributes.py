@@ -43,9 +43,9 @@ print(car._Car__brand) # Honda # Technically you can access them outside the cla
 
 # Non-Public Methods and Name Mangling:
 # - To make a method "non-public", you should add a leading underscore.
-def _display_data:
+def _display_data():
     pass
 
 # - If you add two underscores, the process of name mangling will occur, just like with non-public attributes.
-def __display_data:
+def __display_data():
     pass

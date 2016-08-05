@@ -4,6 +4,9 @@ def hello(): # 1. Create a Python variable hello which is a callable.
 
 hello() # 2. Call the function.
 
+# NOTE: 
+# - In Python, objects are PASSED by reference and NOT PASSED by value. 
+# - We pass a reference to the object, not a new copy, so the original object can be modified. 
 
 def add(x, y): # Parameters
     # pass # Do Nothing
