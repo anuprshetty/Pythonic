@@ -63,6 +63,7 @@ print(tuple2) # (3, [5, 6], 8)
 tuple2[1].append(77)
 tuple2[1][0] = 10
 print(tuple2) # (3, [10, 6, 77], 8)
+# NOTE: So choosing an immutable "container" object (e.g a tuple) doesn't "protect" the elements themselves from change if they are mutable (e.g lists).
 
 # Dictionary is sorted based on Keys. So faster searching (Binary search O(logn)).
 # Dictionary is hash table. Time complexity for search --> O(1).

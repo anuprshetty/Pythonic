@@ -20,7 +20,9 @@ class WarCardGame:
         for i in range(26):
             character.add_card(self._deck.draw())
 
-    def start_battle(self, cards_from_previous_war=list()):
+    def start_battle(self, cards_from_previous_war=None):
+        if not cards_from_previous_war:
+            cards_from_previous_war = []
 
         print("\n== Let's Start the Battle ==\n")
 
