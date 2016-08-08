@@ -10,7 +10,7 @@ deck = Deck()
 
 game = WarCardGame(player, computer, deck)
 game.print_welcome_message()
-while not game.check_game_over():
+while not game.is_game_over():
     game.start_battle()
     game.print_stats()
 

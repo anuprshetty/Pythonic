@@ -80,7 +80,7 @@ class WarCardGame:
             print("\nNO hidden cards\n")
         self.start_battle(player_cards + computer_cards + cards_from_battle)
 
-    def check_game_over(self):
+    def is_game_over(self):
         if not self._player.has_empty_deck() and not self._computer.has_empty_deck():
             return False
 
