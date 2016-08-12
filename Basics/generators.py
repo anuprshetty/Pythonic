@@ -16,6 +16,8 @@ def yield_square_numbers(nums):
 	for num in nums:
 		yield num * num
 
+	return -1  # We can return a value when the StopIteration exception is thrown.
+
 
 numbers = [1, 2, 3, 4, 5]
 
@@ -33,6 +35,11 @@ print(square_numbers)  # <generator object yield_square_numbers at 0x7f60927628e
 
 for _ in range(len(numbers)):
 	print(f'next: {next(square_numbers)}')
+
+try:
+	print(f'next: {next(square_numbers)}')
+except StopIteration as e:
+	print(f'return: {e.value}')
 
 # print(f'error: {next(square_numbers)}')  # StopIteration exception
 print(f'default: {next(square_numbers, 0)}')  # default: 0
