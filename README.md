@@ -64,3 +64,10 @@
 - In the class, we choose to expose only the members that should be exposed and all other members are non-public which can't/shouldn't be accessed from outside of the class.
 - User --> Blackbox(class) --> Effect - A user of the class knows how to interact with the blackbox but doesn't know the details of the internal implementation of the class. He/She only knows the effect that the blackbox will have. This way we are hiding the implementation from the user and we can change it without affecting how the user interacts with a member of the class.
 - IMPORTANT: Abstraction also allows us to abstract out common parts of the code to avoid repetition (Inheritance - Reusability) - Representations of more abstract objects. Ex: Dog class
+
+### Inheritance
+
+- [one-stop for MRO](https://www.python.org/download/releases/2.3/mro/)
+- [What is MRO in Python?](https://www.educative.io/edpresso/what-is-mro-in-python)
+- [Wiki: C3 linearization](https://en.wikipedia.org/wiki/C3_linearization)
+- - [Research paper: A Monotonic Superclass Linearization for Dylan](https://opendylan.org/_static/c3-linearization.pdf)
