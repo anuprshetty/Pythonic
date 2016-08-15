@@ -45,5 +45,5 @@ grand_son = GrandSon()
 grand_son.show_grand_son()
 grand_son.show_son()
 grand_son.show_father()
-del grand_son
+del grand_son  # del decreases reference count of object by 1. After that if the reference count of object is 0, then destructor will be called before destroying the object by garbage collector.
 print("program ends")

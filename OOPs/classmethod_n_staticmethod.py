@@ -11,6 +11,9 @@
 # c. Static method:
 
 class ClassTest:
+    # Bound Method:
+    # - If a function is an attribute of class and it is accessed via the instances, they are called bound methods.
+    # - A bound method is one that has ‘self‘ as its first argument.
     def instance_method(self):
         print(f"Called instance method of {self}")
 
@@ -24,6 +27,17 @@ class ClassTest:
     def static_method():
         print(f"Called static method")
 
+    # Unbound Method:
+    # - Methods that do not have an instance of the class as the first argument are known as unbound methods.
+    # - It does not accept any instance as an argument.
+    # - As of Python 3.0, the unbound methods have been removed from the language.
+    # - They are not bounded with any specific object of the class.
+    # - To make the below method unbound_method() work, it should be made into a static method.
+    # - Static methods are similar to class methods but are bound completely to class instead of particular objects. They are accessed using class names.
+    # - Not all the methods need to alter the instances of a class. They might serve any common purpose. A method may be a utility function also.
+    def unbound_method():
+        print(f"Called unbound method")
+
     
 classtest = ClassTest()
 # instance_method
@@ -33,6 +47,9 @@ ClassTest.class_method()
 # static_method
 classtest.static_method()
 ClassTest.static_method()
+# unbound_method
+# classtest.unbound_method()  # TypeError: unbound_method() takes 0 positional arguments but 1 was given
+ClassTest.unbound_method()  # Called unbound method
 
 # Method Chaining:
 # - In Object-Oriented Programming, Method Chaining is a very common syntax that lets us call several methods one after the other on the same instance.

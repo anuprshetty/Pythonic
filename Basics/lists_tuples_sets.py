@@ -1,3 +1,6 @@
+# Containers:
+# - Some objects contain references to other objects; these are called containers. Examples of containers are tuples, lists and dictionaries.
+
 # 3 different collections that allow to store multiple values in a signle variable.
 # List
 # Heterogeneous Data Structure - Elements CAN BE of different data types.

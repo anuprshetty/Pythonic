@@ -1,3 +1,8 @@
+# Generator functions:
+# - A function or method which uses the yield statement is called a generator function.
+# - Such a function, when called, always returns an iterator object which can be used to execute the body of the function: calling the iterator’s iterator.__next__() method will cause the function to execute until it provides a value using the yield statement.
+# - When the function executes a return statement or falls off the end, a StopIteration exception is raised and the iterator will have reached the end of the set of values to be returned.
+
 # List holds entire results in the memory.
 # But Generator object don't hold entire results in the memory. It yields one result at a time. i.e., Later when we ask for a result, it will compute and give it to us.
 # Advantages of Generators:
