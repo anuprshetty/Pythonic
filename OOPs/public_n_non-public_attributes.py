@@ -4,6 +4,7 @@
 # 1. Public attribute: An attribute that can be accessed and modified directly without access restrictions.
 class Car:
     def __init__(self, brand, model, year):
+        # Article: https://medium.com/python-features/naming-conventions-with-underscores-in-python-791251ac7097#:~:text=The%20use%20of%20double%20underscore,with%20names%20defined%20by%20subclasses.
         self.__brand = brand # Non-Public attribute by name mangling approach.
         self._model = model # Non-Public attribute by naming convention approach.
         self.year = year # Public attribute
