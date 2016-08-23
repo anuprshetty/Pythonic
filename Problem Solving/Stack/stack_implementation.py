@@ -23,7 +23,7 @@ class Stack:
 			return "Error: Stack is empty"
 		return ele
 
-	def peak(self):
+	def peek(self):
 		try:
 			ele = self._stack[-1]
 		except IndexError:
@@ -39,6 +39,15 @@ class Stack:
 	def top(self):
 		return len(self._stack) - 1
 
+	def is_empty(self):
+		return len(self._stack) == 0
+
+	def is_full(self):
+		if self.capacity() is None:
+			return False
+		else:
+			return self.size() == self.capacity()
+
 	def display(self):
 		print(self._stack)
 
@@ -52,10 +61,11 @@ stack.push(1)
 stack.push(2)
 stack.push(3)
 stack.display()
-print(stack.peak())
+print(stack.peek())
 print(stack.pop())
 print(stack.pop())
 print(stack.pop())
+print(stack.is_empty())
 stack.display()
 
 print("Stack in Python:")
@@ -66,11 +76,12 @@ stack.append(1)  # push
 stack.append(2)
 stack.append(3)
 print(stack)
-print(stack[-1])  # peak without exception handling
+print(stack[-1])  # peek without exception handling
 print(stack.pop())  # pop without exception handling
 print(stack.pop())
 print(stack.pop())
+print(len(stack) == 0)  # is_empty
 print(stack)
 
-# Time complexity for push, pop, peak --> O(1)
+# Time complexity for push, pop, peek --> O(1)
 # Space complexity for stack --> O(n)

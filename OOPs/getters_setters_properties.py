@@ -21,6 +21,7 @@ class Movie:
         else:
             print("Invalid title")
 
+
 movie = Movie("Pursuit of HappYness", 10)
 print(movie.get_title())
 
@@ -30,6 +31,7 @@ print(movie.get_title())
 # Ex: set_name
 movie.set_title("Inception")
 print(movie.get_title())
+
 
 # NOTE:
 # We will commonly see Getters and Setters in programming langauges like Java. But in python, we use something called Properties.
