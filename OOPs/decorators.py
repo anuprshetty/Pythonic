@@ -6,7 +6,7 @@
 def decorator_function(arg_function):
 	def wrapper_function():
 		# Code to extend the functionality 
-		arg_function()
+		return arg_function()
 
 	# Code to extend the functionality
 	return wrapper_function
