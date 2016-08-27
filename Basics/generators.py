@@ -3,6 +3,10 @@
 # - Such a function, when called, always returns an iterator object which can be used to execute the body of the function: calling the iterator’s iterator.__next__() method will cause the function to execute until it provides a value using the yield statement.
 # - When the function executes a return statement or falls off the end, a StopIteration exception is raised and the iterator will have reached the end of the set of values to be returned.
 
+# yield keyword:
+# - Yield is a keyword in Python that is used to return from a function without destroying the states of its local variable and when the function is called, the execution starts from the last yield statement.
+# - Any function that contains a yield keyword is termed a generator.
+
 # List holds entire results in the memory.
 # But Generator object don't hold entire results in the memory. It yields one result at a time. i.e., Later when we ask for a result, it will compute and give it to us.
 # Advantages of Generators:
@@ -70,3 +74,35 @@ print('Generator to List conversion:')
 print(list(square_numbers))  # []
 square_numbers = (number * number for number in numbers)
 print(list(square_numbers))  # [1, 4, 9, 16, 25]
+
+print()
+# 'yield from' statement:
+# - shorthand notation for using a generator inside a generator.
+# - Also it's used for implementing coroutines in Python.
+
+print("yield from:")
+
+
+def gen1():
+	yield 1
+	yield 2
+	yield 3
+
+
+def gen2():
+	yield 100
+	yield from gen1()
+	yield 200
+
+# above gen2() is same as below gen2()
+
+
+# def gen2():
+# 	yield 100
+# 	for num in gen1():
+# 		yield num
+# 	yield 200
+
+
+for num in gen2():
+	print(num)  # 100, 1, 2, 3, 200
