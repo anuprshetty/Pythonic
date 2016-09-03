@@ -1,5 +1,7 @@
 # Pythonic
 
+From Python syntax to Pythonic style.
+
 ## Object-Oriented Programming
 
 - A programming paradigm that organizes software design around objects.
@@ -43,7 +45,7 @@
 - Objects created from the class.
 - Instance Attributes vs Class Attributes
 
-### Constructor - __init__()
+### Constructor - **init**()
 
 - Special method used to define the initial state of the object when it's created.
 - It is called automatically when an instance is created.
