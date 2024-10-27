@@ -24,7 +24,7 @@ class Car:
     
     # String representation of an object for developers while debugging.
     # __repr__() method is used in Python debugger.
-    # __repr__() method is used to unambiguous representation of an object. So that you use that to recreate the object.
+    # __repr__() method is used for unambiguous representation of an object. So that you use that to recreate the object.
     def __repr__(self):
         return "__repr__: An object of Car class"
 

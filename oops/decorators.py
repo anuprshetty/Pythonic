@@ -2,14 +2,15 @@
 # A function that takes a function as an argument and extends it's behaviour without explicitly modifying it.
 # That's why we call it as decorator. It's sort of like decorating another function by extending it's behaviour. But it doesn't explicitly modify the function. It just adds extra flavour or functionality to the function.
 
+
 # Typical syntax of a decorator function:
 def decorator_function(arg_function):
-	def wrapper_function():
-		# Code to extend the functionality 
-		return arg_function()
+    def wrapper_function():
+        # Code to extend the functionality
+        return arg_function()
 
-	# Code to extend the functionality
-	return wrapper_function
+    # Code to extend the functionality
+    return wrapper_function
 
 
 # @property decorator:
@@ -21,27 +22,27 @@ def decorator_function(arg_function):
 
 
 class Dog:
-	def __init__(self, age):
-		self._age = age
+    def __init__(self, age):
+        self._age = age
 
-	# age property
-	# Getter
-	@property
-	def age(self):
-		return self._age
+    # age property
+    # Getter
+    @property
+    def age(self):
+        return self._age
 
-	# Setter
-	@age.setter
-	def age(self, age):
-		if isinstance(age, int) and 0 < age <= 30:
-			self._age = age
-		else:
-			print("Invalid age")
+    # Setter
+    @age.setter
+    def age(self, age):
+        if isinstance(age, int) and 0 < age <= 30:
+            self._age = age
+        else:
+            print("Invalid age")
 
-	# Deleter
-	@age.deleter
-	def age(self):
-		del self._age
+    # Deleter
+    @age.deleter
+    def age(self):
+        del self._age
 
 
 dog = Dog(10)

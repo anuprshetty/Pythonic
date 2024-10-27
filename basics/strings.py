@@ -1,9 +1,9 @@
-name = 'Ram' # single quote
-name = "Anup" # double quote
+name = "Ram"  # single quote
+name = "Anup"  # double quote
 
 print(name)
-print(name + name) # string join
-print(name * 3) # print name 3 times
+print(name + name)  # string join
+print(name * 3)  # print name 3 times
 
 name2 = name
 
@@ -27,3 +27,6 @@ print("Hello, {}! Your age is {}".format(name, age))
 print("Hello, {1}! Your age is {0}".format(age, name))
 age = 40
 print("Hello, {}! Your age is {}".format(name, age))
+
+for letter in name:
+    print(letter)
