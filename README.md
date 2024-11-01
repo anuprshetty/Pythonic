@@ -45,7 +45,7 @@ From Python syntax to Pythonic style.
 - Objects created from the class.
 - Instance Attributes vs Class Attributes
 
-### Constructor - **init**()
+### Constructor - \_\_init\_\_()
 
 - Special method used to define the initial state of the object when it's created.
 - It is called automatically when an instance is created.
@@ -59,7 +59,7 @@ From Python syntax to Pythonic style.
 
 ### Data Abstraction
 
-- Let's us hide the complexity of internal implementation of the class from the user.
+- helps us hide the complexity of internal implementation of the class from the user.
 - Class = Interface + Implementation
 - Interface - The "visible" part of the class that the program can interact with. It's basically what features to show from that class.
 - Implementation - The internal part of the class with the code that performs the functionality behind the scenes. It is the actual code that makes all functionality of the class work.
